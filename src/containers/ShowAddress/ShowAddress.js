@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios'
 import classes from './ShowAddress.css'
 import Spinner from '../../components/Spinner/Spinner'
-import Aux from '../../hoc/Aux'
+import Aux from '../../hoc/Auxiliary'
 import Address from '../../components/Address/Address'
 class ShowAddress extends Component {
     state = {
