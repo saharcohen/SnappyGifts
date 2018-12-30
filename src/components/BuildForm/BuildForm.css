@@ -1,0 +1,35 @@
+.Row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+    width:60%;
+    align-items: center;
+  }
+  .Col50 {
+        flex: 50%;
+        padding: 0 16px;
+  }
+  .Button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    color: #5C9210;
+}
+.Row button:disabled {
+    background-color: #AC9980;
+    border: 1px solid #7E7365;
+    color: #ccc;
+    cursor: default;
+}
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+    .Row {
+      flex-direction: column-reverse;
+  }
+}

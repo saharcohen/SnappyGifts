@@ -1,27 +1,30 @@
-import React, {Component} from React;
- 
+import React, {Component} from 'react';
+import {Route, NavLink} from 'react-router-dom'
+import classes from './AddressApp.css'
+import AddAddress from '../AddAddress/AddAddress'
+import ShowAddress from '../ShowAddress/ShowAddress'
 
 class AddressApp extends Component {
 render() {
     return (
-        <div className="Blog">
+        <div className={classes.NavBar}>
             <header>
                 <nav>
                     <ul>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to={{
-                            pathname: './new-post',
-                            hash: '#submit',
-                            search:'?quick-sumbit=true'
-                        }}>New Post</Link></li>
+                        <li><NavLink to='/' exact>
+                        Add New Address</NavLink></li>
+                        <li><NavLink to='/show-address' exact>
+                        Show All Addresses</NavLink></li>
                     </ul>
                 </nav>
             </header>
             {/* <Route path="/" exact render={() => <h1>Home</h1>}></Route>
             <Route path="/new-post" exact render={() => <h1>Home 2</h1>}></Route> */}
-            <Route path="/" exact component={Posts} ></Route>
-            <Route path="/new-post" exact component={NewPost} ></Route>
+            <Route path="/" exact component={AddAddress} ></Route>
+            <Route path="/show-address" exact component={ShowAddress} ></Route>
+
         </div>
     );
     }
 }
+export default AddressApp;
